@@ -1,0 +1,489 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  background: #fff
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+  &:hover
+    text-decoration: none
+
+h1
+  color: #2b2b2b
+  font-size: 60px
+  font-weight: 800
+  text-transform: uppercase
+  width: 100%
+
+h2
+  font-size: 48px
+  font-weight: bold
+  text-transform: uppercase
+  width: 100%
+
+.links
+  text-decoration: underline
+  color: #ed1547
+  font-size: 14px
+
+.container
+  max-width: 1370px
+  width: 100%
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+  position: relative
+
+.logo-icon
+  position: relative
+  width: 160px
+  height: 120px
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  margin: 0 auto 6px
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    transform: rotate(-3deg)
+    opacity: 0.95
+    box-shadow: 11.5px 6.1px 18px 0 rgba(35, 5, 12, 0.29)
+    background: #000000
+  img
+    position: relative
+    z-index: 1
+    width: 120px
+
+.logo
+  text-transform: uppercase
+  text-align: center
+  color: #000
+  font-family: 'PalatinoLinotype', sans-serif
+
+.btn-burger
+  position: absolute
+  top: 89px
+  left: 117px
+  z-index: 1
+  cursor: pointer
+  span
+    display: block
+    width: 36px
+    height: 7px
+    border-radius: 3.5px
+    background: #ef1649
+    margin: 6px 0
+    &:nth-child(2)
+      width: 45px
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  font-size: 18px
+  font-weight: bold
+  padding: 24px 10px
+  border-radius: 35px
+  width: 351px
+  &:hover
+    box-shadow: none
+
+.btn-accent
+  box-shadow: 10.6px 5.6px 18px 0 rgba(239, 22, 73, 0.2)
+  background: #ef1649
+  color: #fff
+
+.btn-border
+  box-shadow: 10.6px 5.6px 18px 0 rgba(239, 22, 73, 0.2)
+  border: solid 2px #ef1649
+  color: #ef1649
+
+.btn-white
+  color: #ef1649
+  background: #ffffff
+
+
+//header
+header
+  padding: 6px 0
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 5
+  .container
+    justify-content: space-between
+    align-items: center
+
+.mail, .phone
+  display: flex
+  align-items: center
+  justify-content: space-between
+  color: #0f0e0d
+  font-size: 18px
+  margin: 0 0 6px
+  .icon
+    width: 22px
+    margin: 0 12px 0 0
+
+.box-contacts
+  text-align: right
+
+.list-social
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  margin: 0 0 9px
+  li
+    margin: 0 12px 0 0
+    &:last-child
+      margin: 0
+    a
+      width: 27px
+      height: 27px
+      box-shadow: 10.6px 5.6px 18px 0 rgba(0, 0, 0, 0.06)
+      background: #f9f9f9
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      padding: 5px
+      img
+        opacity: .4
+
+//main
+main
+  padding: 330px 0 216px
+  position: relative
+  background: url("../img/bg.png") no-repeat right top
+    size: 844px
+  .description
+    margin: 31px 0 82px
+    color: #ef1649
+    font-size: 30px
+    font-weight: bold
+  .btn
+    width: 385px
+
+
+
+.box-subtitle
+  color: #dadada
+  font-weight: 500
+  text-transform: uppercase
+  position: absolute
+  left: -140px
+  top: 580px
+  display: flex
+  align-items: center
+  transform: rotate(90deg)
+  font-size: 72px
+  .text
+    transform: rotate(-180deg)
+
+  .icon
+    transform: rotate(-90deg)
+    margin: 0 0 0 34px
+
+.man-text
+  max-width: 790px
+  p
+    font-style: italic
+    color: #ef1649
+    font-size: 18px
+    margin: 55px 0 0
+
+.btn-group
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  .btn
+    margin: 0 15px 0 0
+    &:last-child
+      margin: 0
+
+//advantages
+.advantages
+  padding: 90px 0
+  position: relative
+  background-image: linear-gradient(to top, #db0f3f, #ef1649)
+  color: #fff
+  &:before
+    content: ''
+    position: absolute
+    height: 100%
+    width: 366px
+    background: url("../img/bg1.jpg") no-repeat center
+      size: cover
+    right: 0
+    top: 0
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 241px
+    width: 77px
+    height: 154px
+    background: url("../img/ellipce1.png") no-repeat center
+      size: contain
+  h2
+    margin: 0 0 39px
+  .description
+    margin: 39px 0 85px
+    max-width: 1215px
+  .line-bottom
+    margin: -30px 0 0
+
+strong
+  display: inline
+  font-weight: bold
+
+.advantages-content
+  width: 100%
+  display: flex
+  align-items: flex-start
+
+.advantages-box
+  display: flex
+  align-items: center
+  margin: 0 0 85px
+  font-size: 24px
+  font-weight: 500
+  p
+    max-width: 290px
+  .icon
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 30px 0 0
+
+.advantages-wrapper
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  max-width: 820px
+  width: 100%
+
+
+.advantages-number
+  margin: 0 -230px 0 87px
+  max-width: 685px
+  font-size: 24px
+  font-weight: 300
+  text-transform: uppercase
+  .number
+    font-size: 345.5px
+    font-weight: bold
+    line-height: .7
+    margin: 0 0 37px
+
+.line-bottom
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+  .btn
+    width: 351px
+    padding: 24px 0
+
+.question
+  font-size: 24px
+  font-weight: 500
+  font-style: italic
+  display: flex
+  align-items: center
+  margin: 0 31px 0 0
+  &:before
+    content: ''
+    margin: 0 17px 0 0
+    background: #f6f6f6
+    height: 5px
+    min-width: 38px
+
+.description
+  font-size: 24px
+  font-weight: 500
+
+//contract
+.contract
+  position: relative
+  background-image: linear-gradient(to top, #db0f3f, #ef1649)
+  padding: 153px 0 175px
+  color: #fff
+  .container
+    align-items: center
+    justify-content: space-between
+  .description
+    margin: 25px 0 55px
+
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: url("../img/bg2.jpg") no-repeat center
+      size: cover
+    opacity: .15
+  .line-bottom
+    flex-direction: column
+    align-items: flex-start
+  .question
+    margin: 0 0 25px
+    &:before
+      min-width: 58px
+  .btn
+    margin: 0 0 0 50px
+
+
+.contract-text
+  max-width: 800px
+
+.contract-image
+  width: 504px
+
+//tools
+.tools
+  padding: 201px 0 0
+  h2
+    text-align: center
+  .description
+    margin: 30px 0 50px
+    text-align: center
+    width: 100%
+    font-size: 36px
+    strong
+      color: #eb1547
+
+
+.slick-slide
+  outline: none
+
+.tools-box
+  position: relative
+  height: 830px
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    background: #181c1f
+    opacity: .4
+    width: 100%
+    height: 100%
+
+.tools-box__name
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  z-index: 2
+  padding: 0 10px
+  width: 100%
+  color: #fff
+  font-size: 48px
+  font-weight: bold
+  text-align: center
+
+
+
+
+@import "media"
+// Всегда в конце
