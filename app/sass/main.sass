@@ -68,6 +68,7 @@ body
   line-height: normal
   font-family: $default-font
   background: #fff
+  color: #2b2b2b
 
 html, body
   overflow-x: hidden
@@ -304,7 +305,7 @@ main
   &:after
     content: ''
     position: absolute
-    left: 0
+    left: -3px
     top: 241px
     width: 77px
     height: 154px
@@ -481,6 +482,376 @@ strong
   font-size: 48px
   font-weight: bold
   text-align: center
+
+//marketing
+.marketing
+  padding: 76px 0 84px
+  background: url("../img/bg3.jpg") no-repeat center
+    size: cover
+  .btn
+    margin: 43px auto 0
+    width: 447px
+    text-transform: uppercase
+
+.title-img
+  margin: 0 auto 46px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.marketing-box
+  position: relative
+  padding: 0 40px 0
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+
+  .icon-arrow
+    display: none
+    margin: 17px auto 39px
+  .text
+    text-align: center
+    color: #2b2b2b
+    font-size: 18px
+    max-width: 1362px
+    width: 100%
+    margin: 0 auto
+    display: none
+
+.marketing-box__name
+  margin: 0 120px 0 0
+  color: #2b2b2b
+  font-size: 36px
+  font-weight: bold
+  text-align: center
+
+
+.marketing-slider
+  width: 100%
+  .slick-center
+    margin: 0 -120px 0 -750px
+    .text
+      display: block
+    .icon-arrow
+      display: flex
+      align-items: center
+      justify-content: center
+    .marketing-box__name
+      color: #eb1547
+
+//employees
+.employees
+  position: relative
+  padding: 120px 0
+  .box-subtitle
+    left: auto
+    right: -140px
+    transform: rotate(-90deg)
+    .text
+      transform: rotate(180deg)
+  h2
+    max-width: 1060px
+    margin: 0 0 60px
+
+.employee-box__wrapper
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+.employee-box
+  display: flex
+  align-items: stretch
+  color: #535353
+  font-size: 14px
+  font-weight: 300
+  &__photo
+    width: 341px
+    min-width: 341px
+    height: 341px
+    background: #f6f6f6
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      right: 0
+      width: 0
+      height: 0
+      border-top: 17.5px solid transparent
+      border-right: 30px solid #fff
+      border-bottom: 17.5px solid transparent
+      transform: rotate(0,-50%)
+  &__content
+    padding: 30px 33px 30px 25px
+    width: 341px
+    min-width: 341px
+  .name
+    font-size: 24px
+    font-weight: 500
+    color: #2b2b2b
+  .position
+    margin: 14px 0 20px
+    color: #ef1649
+    font-size: 18px
+    font-weight: 500
+    font-style: italic
+  &:nth-child(2)
+    .employee-box__photo
+      &:before
+        border-top: 17.5px solid transparent
+        border-left: 30px solid #fff
+        border-right: none
+        border-bottom: 17.5px solid transparent
+        right: auto
+        left: 0
+
+.employees-slider
+  width: 100%
+
+.slick-arrow
+  z-index: 1
+  outline: none
+  width: 53px
+  height: 53px
+  opacity: 1
+  &:before
+    display: none
+
+.slick-prev
+  background: url("../img/arr-l.png") no-repeat center
+    size: contain
+  left: -106px
+  &:hover, &:focus
+    background: url("../img/arr-l.png") no-repeat center
+      size: contain
+
+.slick-next
+  background: url("../img/arr-r.png") no-repeat center
+    size: contain
+  right: -106px
+  &:hover, &:focus
+    background: url("../img/arr-r.png") no-repeat center
+      size: contain
+
+//portfolio
+.portfolio
+  padding: 140px 0 116px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    width: 366px
+    background: #f6f6f6 no-repeat right top
+      size: cover
+  .container
+    align-items: center
+
+.portfolio-image__slider
+  width: 1231px
+  height: 653px
+  background: url("../img/macbook.png") no-repeat center
+    size: 100%
+  margin: 0 -100px 0 -535px
+  position: relative
+
+.portfolio-img
+  margin: 6.5px 0 0 178px
+  width: 862px
+
+.portfolio-content
+  max-width: 760px
+  width: 100%
+  position: relative
+  z-index: 1
+  h2
+    margin: 0 0 49px
+    max-width: 480px
+
+.portfolio-box
+  font-size: 18px
+  font-weight: 300
+
+.indicators
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  margin: 0 0 29px
+  font-size: 30px
+  li
+    display: flex
+    align-items: center
+    margin: 0 59px 0 0
+    &:last-child
+      margin: 0
+    p
+      text-shadow: 10.6px 5.6px 18px rgba(239, 22, 73, 0.2)
+      font-size: 30px
+      color: #ef1649
+      font-weight: bold
+      margin: 0 22px 0 0
+
+.portfolio-nav
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 35px 0 0
+  .slick-arrow
+    position: relative
+    top: 0
+    transform: translate(0)
+    left: 0
+    right: 0
+    width: auto
+    height: auto
+    background: transparent
+    display: flex
+    align-items: center
+    color: #ef1649
+    font-size: 18px
+    font-weight: 300
+    line-height: normal
+    &:hover, &:focus
+      background: transparent
+  .slick-next
+    span
+      margin: 0 16px 0 0
+  .slick-prev
+    span
+      margin: 0 0 0 16px
+
+//turnkey-marketing
+.turnkey-marketing
+  padding: 157px 0
+
+.turnkey-marketing__content
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 1
+  .box-text
+    max-width: 590px
+  .description
+    margin: 30px 0 0
+
+
+
+.turnkey-marketing__slider
+  width: 100%
+  margin: -270px 0 0
+  .slick-slide.slick-center
+    margin: 330px 0 0
+    .turnkey-marketing__box
+      margin: 0 0 0 70px
+    .turnkey-marketing__box-icon
+      background: #ef1649
+      width: 260px
+
+      img
+        filter: brightness(0) invert(1)
+        opacity: 1
+    .number
+      display: block
+    .turnkey-marketing__box-text
+      display: block
+  .slick-slide.slick-center~.slick-slide
+    margin: 0 0 330px 0
+  .slick-slide.slick-center+.slick-slide
+    margin: 0 0 330px 70px
+
+  .slick-slide
+    margin: 330px 0 0 0
+
+
+
+.turnkey-marketing__box
+  display: flex
+  align-items: stretch
+
+.turnkey-marketing__box-icon
+  background: rgba(#e8eaee, .4)
+  position: relative
+  min-width: 260px
+  width: 100%
+  height: 260px
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    opacity: .2
+  .number
+    position: absolute
+    top: 35px
+    left: 25px
+    color: rgba(43, 43, 43, 0.2)
+    font-size: 24px
+    font-weight: bold
+    display: none
+
+.turnkey-marketing__box-text
+  min-width: 536px
+  padding: 30px 55px
+  display: none
+  h3
+    margin: 0 0 28px
+    font-size: 24px
+    font-weight: bold
+
+.turnkey-marketing__nav
+  width: 260px
+  height: 260px
+  margin: 0 0 0 50px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+
+.nav-slide
+  display: flex
+  align-items: center
+  justify-content: center
+  .slick-arrow
+    width: 56px
+    height: 56px
+    background: rgba(#e8eaee, .4)
+    position: relative
+    top: 0
+    transform: translate(0)
+    left: 0
+    right: 0
+    transition: .3s ease
+  .slick-next
+    background: rgba(#e8eaee, .4) url("../img/arr-r-bl.png") no-repeat center
+      size: 17px
+    &:hover, &:focus
+      background: url("../img/arr-r-bl.png") no-repeat center
+        size: 17px
+  .slick-prev
+    background: rgba(#e8eaee, .4) url("../img/arr-l-bl.png") no-repeat center
+      size: 17px
+    &:hover, &:focus
+      background: url("../img/arr-l-bl.png") no-repeat center
+        size: 17px
+
+
+.counter-slide
+  display: flex
+  align-items: center
+  margin: 0 0 57px
+  font-size: 48px
+  font-weight: bold
+  color: #e8eaee
+  .cp
+    color: #ef1649
+
 
 
 
