@@ -92,14 +92,25 @@ $('.turnkey-marketing__slider').slick({
     infinite: true,
     centerPadding: '0px',
     appendArrows: '.nav-slide',
-    variableWidth: true
+    variableWidth: true,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 5,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
 
 });
 
 $(".turnkey-marketing__slider").on('afterChange', function(event, slick, currentSlide){
     $(".cp").text(currentSlide<10?`0${currentSlide+1}`:currentSlide+1);
 });
-
-// $(".turnkey-marketing__slider .slick-slide.slick-active").slice(0,4).addClass('slick-slide__prev');
-
 

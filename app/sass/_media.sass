@@ -79,6 +79,27 @@
     min-width: 275px
     padding: 30px 20px
 
+  .turnkey-marketing__box-icon, .turnkey-marketing__nav
+    width: 220px
+    height: 220px
+
+  .turnkey-marketing__slider .slick-slide
+    width: 220px
+
+  .turnkey-marketing__slider .slick-slide.slick-current .turnkey-marketing__box-icon
+    width: 220px
+    min-width: 220px
+
+  .turnkey-marketing__content .box-text
+    max-width: 450px
+    h2
+      font-size: 34px
+    .description
+      font-size: 20px
+
+  .turnkey-marketing__slider
+    margin: -225px 0 0
+
 
 @media only screen and (max-width : 1350px)
   .advantages-box
@@ -120,6 +141,35 @@
 
   .advantages:after
     top: 35%
+
+  .turnkey-marketing__slider .slick-slide, .turnkey-marketing__slider .slick-slide.slick-current ~ .slick-slide
+    margin: 0
+
+  .turnkey-marketing__slider
+    margin: 30px 0 0
+
+  .turnkey-marketing__slider .slick-slide.slick-current
+    margin: 0 30px
+
+  .turnkey-marketing__slider .slick-slide.slick-current .turnkey-marketing__box
+    margin: 0
+
+  .turnkey-marketing__slider .slick-slide.slick-current .turnkey-marketing__box
+    height: auto
+    flex-direction: column
+    align-items: center
+
+
+  .turnkey-marketing__box-text
+    min-width: 767px
+    text-align: center
+
+  .turnkey-marketing__content .box-text
+    max-width: none
+    width: calc(100% - 220px)
+
+  .turnkey-marketing
+    padding: 100px 0
 
 
 @media only screen and (max-width : 1200px)
@@ -298,6 +348,13 @@
       p
         font-size: 20px
 
+  .turnkey-marketing__box-text
+    min-width: 575px
+    padding: 20px
+    h3
+      font-size: 18px
+      margin: 0 0 20px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 670px)
@@ -318,6 +375,25 @@
   .tools .description
     font-size: 18px
 
+  .turnkey-marketing__nav
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    height: auto
+    margin: 30px auto 0
+
+  .turnkey-marketing__content
+    flex-direction: column
+    align-items: center
+
+  .counter-slide
+    margin: 0
+
+  .turnkey-marketing__content .box-text
+    width: 100%
+
+
 @media only screen and (max-width : 575px)
   main
     background: #fff
@@ -329,10 +405,10 @@
     font-size: 26px
     text-align: center
 
-  h2
+  h2, .turnkey-marketing__content .box-text h2
     font-size: 22px
 
-  .description
+  .description, .turnkey-marketing__content .box-text .description
     font-size: 15px
 
   .marketing-box .text
@@ -417,6 +493,20 @@
   .employee-box__photo
     height: 300px
 
+  .turnkey-marketing__box-text
+    min-width: 480px
+
+  .turnkey-marketing
+    padding: 70px 0
+
+  .nav-slide .slick-arrow
+    width: 46px
+    height: 46px
+
+  .nav-slide .slick-next, .nav-slide .slick-prev
+    -webkit-background-size: 14px
+    background-size: 14px
+
 @media only screen and (max-width : 480px)
   .mail .icon, .phone .icon
     margin: 0 10px 0 0
@@ -457,7 +547,8 @@
   .contract .description
     margin: 20px 0 40px
 
-
+  .turnkey-marketing__box-text
+    min-width: 360px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 420px)
@@ -503,7 +594,8 @@
   .contract-image
     width: 100%
 
-
+  .counter-slide
+    font-size: 38px
 
 
 @media only screen and (max-width : 360px)
@@ -512,4 +604,7 @@
 
   .question
     font-size: 16px
+
+  .turnkey-marketing__box-text
+    min-width: 300px
 
