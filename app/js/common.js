@@ -2,7 +2,21 @@ $('.tools-slider').slick({
     slidesToShow: 3,
     arrows: false,
     infinite: true,
-    asNavFor: '.marketing-slider'
+    asNavFor: '.marketing-slider',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
 });
 
 
@@ -14,7 +28,21 @@ slider
         arrows: false,
         variableWidth: true,
         infinite: true,
-        asNavFor: '.tools-slider'
+        asNavFor: '.tools-slider',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
 slider.on('wheel', (function(e) {
@@ -31,7 +59,15 @@ $('.employees-slider').slick({
     slidesToShow: 2,
     infinite: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
-    nextArrow: '<button type="button" class="slick-next"></button>'
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    responsive: [
+        {
+            breakpoint: 1150,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
 });
 
 $('.portfolio-image__slider').slick({
@@ -53,12 +89,17 @@ $('.portfolio-slider').slick({
 $('.turnkey-marketing__slider').slick({
     slidesToShow: 7,
     centerMode: true,
-    // infinite: true,
-    centerPadding: '',
+    infinite: true,
+    centerPadding: '0px',
     appendArrows: '.nav-slide',
+    variableWidth: true
+
 });
 
 $(".turnkey-marketing__slider").on('afterChange', function(event, slick, currentSlide){
     $(".cp").text(currentSlide<10?`0${currentSlide+1}`:currentSlide+1);
 });
+
+// $(".turnkey-marketing__slider .slick-slide.slick-active").slice(0,4).addClass('slick-slide__prev');
+
 

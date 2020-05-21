@@ -182,6 +182,7 @@ h2
   box-shadow: 10.6px 5.6px 18px 0 rgba(239, 22, 73, 0.2)
   border: solid 2px #ef1649
   color: #ef1649
+  background: #fff
 
 .btn-white
   color: #ef1649
@@ -742,19 +743,17 @@ strong
   .description
     margin: 30px 0 0
 
-
-
 .turnkey-marketing__slider
   width: 100%
   margin: -270px 0 0
-  .slick-slide.slick-center
-    margin: 330px 0 0
+  .slick-slide.slick-current
+    margin: 330px 0 0 0
     .turnkey-marketing__box
       margin: 0 0 0 70px
     .turnkey-marketing__box-icon
       background: #ef1649
       width: 260px
-
+      min-width: 260px
       img
         filter: brightness(0) invert(1)
         opacity: 1
@@ -762,14 +761,13 @@ strong
       display: block
     .turnkey-marketing__box-text
       display: block
-  .slick-slide.slick-center~.slick-slide
+  .slick-slide.slick-current~.slick-slide
     margin: 0 0 330px 0
-  .slick-slide.slick-center+.slick-slide
+  .slick-slide.slick-current+.slick-slide
     margin: 0 0 330px 70px
-
   .slick-slide
     margin: 330px 0 0 0
-
+    width: 260px
 
 
 .turnkey-marketing__box
@@ -779,7 +777,7 @@ strong
 .turnkey-marketing__box-icon
   background: rgba(#e8eaee, .4)
   position: relative
-  min-width: 260px
+
   width: 100%
   height: 260px
   display: flex
