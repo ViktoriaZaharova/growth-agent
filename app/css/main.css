@@ -531,10 +531,27 @@ strong {
     .tools .description strong {
       color: #eb1547; }
 
+.horizontal-scroll-wrapper {
+  overflow-y: auto;
+  white-space: nowrap; }
+
+.tools-slider .box-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1900px; }
+
 .slick-slide {
   outline: none; }
 
 .tools-box {
+  white-space: normal;
   position: relative;
   height: 830px;
   display: -webkit-box;
@@ -545,7 +562,9 @@ strong {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  min-width: 635px;
+  width: 635px; }
   .tools-box img {
     width: 100%;
     height: 100%;
@@ -630,11 +649,12 @@ strong {
 
 .marketing-slider {
   width: 100%; }
-  .marketing-slider .slick-center {
-    margin: 0 -120px 0 -750px; }
-    .marketing-slider .slick-center .text {
+  .marketing-slider .slick-center.slick-slide {
+    margin: 0 -120px 0 -750px;
+    z-index: 1; }
+    .marketing-slider .slick-center.slick-slide .text {
       display: block; }
-    .marketing-slider .slick-center .icon-arrow {
+    .marketing-slider .slick-center.slick-slide .icon-arrow {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -644,8 +664,11 @@ strong {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
-    .marketing-slider .slick-center .marketing-box__name {
+    .marketing-slider .slick-center.slick-slide .marketing-box__name {
       color: #eb1547; }
+  .marketing-slider .slick-slide {
+    z-index: 2;
+    position: relative; }
 
 .employees {
   position: relative;
@@ -1068,7 +1091,7 @@ strong {
     padding: 0 20px; }
   .marketing-box .text {
     max-width: 1140px; }
-  .marketing-slider .slick-center {
+  .marketing-slider .slick-center.slick-slide {
     margin: 0 -120px 0 -550px; }
   .contract-text {
     max-width: none;
@@ -1178,7 +1201,7 @@ strong {
     max-width: 767px; }
   .marketing-box__name {
     font-size: 30px; }
-  .marketing-slider .slick-center {
+  .marketing-slider .slick-center.slick-slide {
     margin: 0 -100px 0 -250px; }
   .employees h2 {
     margin: 0 0 40px; } }
@@ -1253,7 +1276,7 @@ strong {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 800px) {
-  .marketing-slider .slick-center {
+  .marketing-slider .slick-center.slick-slide {
     margin: 0 auto; }
   .marketing-box .text {
     max-width: 400px; }

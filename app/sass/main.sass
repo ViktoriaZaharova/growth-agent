@@ -446,16 +446,29 @@ strong
     strong
       color: #eb1547
 
+.horizontal-scroll-wrapper
+  overflow-y: auto
+  white-space: nowrap
+
+.tools-slider
+  .box-wrap
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    width: 1900px
 
 .slick-slide
   outline: none
 
 .tools-box
+  white-space: normal
   position: relative
   height: 830px
   display: flex
   align-items: center
   justify-content: center
+  min-width: 635px
+  width: 635px
   img
     width: 100%
     height: 100%
@@ -529,8 +542,9 @@ strong
 
 .marketing-slider
   width: 100%
-  .slick-center
+  .slick-center.slick-slide
     margin: 0 -120px 0 -750px
+    z-index: 1
     .text
       display: block
     .icon-arrow
@@ -539,6 +553,9 @@ strong
       justify-content: center
     .marketing-box__name
       color: #eb1547
+  .slick-slide
+    z-index: 2
+    position: relative
 
 //employees
 .employees

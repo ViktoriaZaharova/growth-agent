@@ -1,22 +1,34 @@
-$('.tools-slider').slick({
-    slidesToShow: 3,
-    arrows: false,
-    infinite: true,
-    asNavFor: '.marketing-slider',
-    responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-            }
-        }
-    ]
+var scroller = {};
+scroller.e = document.getElementById("scroll");
+
+if (scroller.e.addEventListener) {
+    scroller.e.addEventListener("mousewheel", MouseWheelHandler, false);
+    scroller.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+} else scroller.e.attachEvent("onmousewheel", MouseWheelHandler);
+
+function MouseWheelHandler(e) {
+    // cross-browser wheel delta
+    var e = window.event || e;
+    var delta = -30 * Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+
+    var pst = $("#scroll").scrollLeft() + delta;
+
+    if (pst < 0) {
+        pst = 0;
+    } else if (pst > $(".box-wrap").width()) {
+        pst = $(".box-wrap").width();
+    }
+
+    $("#scroll").scrollLeft(pst);
+
+    return false;
+}
+
+$("#scroll").off("mousewheel").on("mousewheel", function(ev) {
+    var el = $(ev.currentTarget);
+    return ev.originalEvent.deltaY > 0
+        ? el[0].scrollWidth - el.scrollLeft() <= el.innerWidth()
+        : el.scrollLeft() === 0;
 });
 
 
@@ -28,7 +40,9 @@ slider
         arrows: false,
         variableWidth: true,
         infinite: true,
-        asNavFor: '.tools-slider',
+        focusOnSelect: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 768,
@@ -45,15 +59,6 @@ slider
         ]
     });
 
-slider.on('wheel', (function(e) {
-    e.preventDefault();
-
-    if (e.originalEvent.deltaY < 0) {
-        $(this).slick('slickNext');
-    } else {
-        $(this).slick('slickPrev');
-    }
-}));
 
 $('.employees-slider').slick({
     slidesToShow: 2,
@@ -110,7 +115,7 @@ $('.turnkey-marketing__slider').slick({
 
 });
 
-$(".turnkey-marketing__slider").on('afterChange', function(event, slick, currentSlide){
-    $(".cp").text(currentSlide<10?`0${currentSlide+1}`:currentSlide+1);
+$(".turnkey-marketing__slider").on('afterChange', function (event, slick, currentSlide) {
+    $(".cp").text(currentSlide < 10 ? `0${currentSlide + 1}` : currentSlide + 1);
 });
 
