@@ -447,7 +447,7 @@ strong
       color: #eb1547
 
 .horizontal-scroll-wrapper
-  overflow-y: auto
+  overflow-y: hidden
   white-space: nowrap
 
 .tools-slider
@@ -455,7 +455,6 @@ strong
     display: flex
     align-items: stretch
     justify-content: space-between
-    width: 1900px
 
 .slick-slide
   outline: none
@@ -482,6 +481,13 @@ strong
     background: #181c1f
     opacity: .4
     width: 100%
+    height: 100%
+
+.maxHeight
+  height: 100vh
+  .box-wrap
+    height: 100%
+  .tools-box
     height: 100%
 
 .tools-box__name

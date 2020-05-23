@@ -532,7 +532,7 @@ strong {
       color: #eb1547; }
 
 .horizontal-scroll-wrapper {
-  overflow-y: auto;
+  overflow-y: hidden;
   white-space: nowrap; }
 
 .tools-slider .box-wrap {
@@ -544,8 +544,7 @@ strong {
           align-items: stretch;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 1900px; }
+          justify-content: space-between; }
 
 .slick-slide {
   outline: none; }
@@ -578,6 +577,13 @@ strong {
     background: #181c1f;
     opacity: .4;
     width: 100%;
+    height: 100%; }
+
+.maxHeight {
+  height: 100vh; }
+  .maxHeight .box-wrap {
+    height: 100%; }
+  .maxHeight .tools-box {
     height: 100%; }
 
 .tools-box__name {

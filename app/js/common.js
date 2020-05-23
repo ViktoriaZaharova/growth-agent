@@ -1,35 +1,40 @@
-var scroller = {};
-scroller.e = document.getElementById("scroll");
+// scroll horizontal
+let scrollSpeed = 30;
+let scroller = document.getElementById("scroll");
 
-if (scroller.e.addEventListener) {
-    scroller.e.addEventListener("mousewheel", MouseWheelHandler, false);
-    scroller.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
-} else scroller.e.attachEvent("onmousewheel", MouseWheelHandler);
+scroller.addEventListener("mousewheel", e=>{
+    // block if e.deltaY==0
+    if( !e.deltaY ) return;
+    // Set scrollDirection (-1 = up // 1 = down)
+    let scrollDirection = (e.deltaY > 0) ? 1 : -1;
+    // convert vertical scroll into horizontal
+    scroller.scrollLeft += scrollSpeed * scrollDirection;
+    let scrollLeft = Math.round(scroller.scrollLeft);
+    // calculate box total vertical scroll
+    let maxScrollLeft = Math.round( scroller.scrollWidth - scroller.clientWidth );
+    // if element scroll has not finished scrolling
+    // prevent window to scroll
+    if(
+        (scrollDirection === -1  && scrollLeft > 0) ||
+        (scrollDirection === 1 && scrollLeft < maxScrollLeft )
+    ) e.preventDefault()
+    // done!
+    return true;
+}, false);
 
-function MouseWheelHandler(e) {
-    // cross-browser wheel delta
-    var e = window.event || e;
-    var delta = -30 * Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
-
-    var pst = $("#scroll").scrollLeft() + delta;
-
-    if (pst < 0) {
-        pst = 0;
-    } else if (pst > $(".box-wrap").width()) {
-        pst = $(".box-wrap").width();
+// position block
+var postion = $('.tools-slider').offset().top,
+    height = $('.tools-slider').height();
+$(document).on('scroll', function (){
+    var scroll = $(document).scrollTop();
+    if(scroll  > postion && scroll < (postion + height) ) {
+        $('.tools-slider').addClass('maxHeight')
+    }else {
+        $('.tools-slider').removeClass('maxHeight')
     }
-
-    $("#scroll").scrollLeft(pst);
-
-    return false;
-}
-
-$("#scroll").off("mousewheel").on("mousewheel", function(ev) {
-    var el = $(ev.currentTarget);
-    return ev.originalEvent.deltaY > 0
-        ? el[0].scrollWidth - el.scrollLeft() <= el.innerWidth()
-        : el.scrollLeft() === 0;
 });
+
+
 
 
 const slider = $(".marketing-slider");
