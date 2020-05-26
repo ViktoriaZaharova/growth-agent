@@ -1,39 +1,3 @@
-// // scroll horizontal
-// let scrollSpeed = 30;
-// let scroller = document.getElementById("scroll");
-//
-// scroller.addEventListener("mousewheel", e=>{
-//     // block if e.deltaY==0
-//     if( !e.deltaY ) return;
-//     // Set scrollDirection (-1 = up // 1 = down)
-//     let scrollDirection = (e.deltaY > 0) ? 1 : -1;
-//     // convert vertical scroll into horizontal
-//     scroller.scrollLeft += scrollSpeed * scrollDirection;
-//     let scrollLeft = Math.round(scroller.scrollLeft);
-//     // calculate box total vertical scroll
-//     let maxScrollLeft = Math.round( scroller.scrollWidth - scroller.clientWidth );
-//     // if element scroll has not finished scrolling
-//     // prevent window to scroll
-//     if(
-//         (scrollDirection === -1  && scrollLeft > 0) ||
-//         (scrollDirection === 1 && scrollLeft < maxScrollLeft )
-//     ) e.preventDefault()
-//     // done!
-//     return true;
-// }, false);
-//
-// // position block
-// var postion = $('.tools-slider').offset().top,
-//     height = $('.tools-slider').height();
-// $(document).on('scroll', function (){
-//     var scroll = $(document).scrollTop();
-//     if(scroll  > postion && scroll < (postion + height) ) {
-//         $('.tools-slider').addClass('maxHeight')
-//     }else {
-//         $('.tools-slider').removeClass('maxHeight')
-//     }
-// });
-
 $('.tools-slider').slick({
     slidesToShow: 3,
     centerMode: true,
