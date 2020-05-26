@@ -1132,7 +1132,17 @@ strong {
     .turnkey-marketing__content .box-text .description {
       font-size: 20px; }
   .turnkey-marketing__slider {
-    margin: -225px 0 0; } }
+    margin: -225px 0 0; }
+  main {
+    padding: 200px 0 216px;
+    background-size: 544px; }
+    main .description {
+      margin: 25px 0 30px; }
+  .box-subtitle {
+    font-size: 67px;
+    top: 450px; }
+  .advantages:before, .portfolio:before {
+    width: 160px; } }
 
 @media only screen and (max-width: 1350px) {
   .advantages-box {
@@ -1410,8 +1420,6 @@ strong {
     font-size: 14px; }
   .mail, .phone {
     font-size: 16px; }
-  .advantages:before, .portfolio:before {
-    width: 200px; }
   .advantages-box {
     width: 100%; }
   .advantages {
@@ -1473,7 +1481,12 @@ strong {
     width: 46px;
     height: 46px; }
   .nav-slide .slick-next, .nav-slide .slick-prev {
-    background-size: 14px; } }
+    background-size: 14px; }
+  .tools-box {
+    min-width: auto;
+    width: 300px; }
+  .tools-box__name {
+    padding: 0 10px; } }
 
 @media only screen and (max-width: 480px) {
   .mail .icon, .phone .icon {
