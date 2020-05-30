@@ -115,38 +115,14 @@ h2
   flex-wrap: wrap
   position: relative
 
-.logo-icon
-  position: relative
-  width: 160px
-  height: 120px
-  display: flex
-  align-items: center
-  justify-content: center
-  text-align: center
-  margin: 0 auto 6px
-  &:before
-    content: ''
-    position: absolute
-    width: 100%
-    height: 100%
-    transform: rotate(-3deg)
-    opacity: 0.95
-    box-shadow: 11.5px 6.1px 18px 0 rgba(35, 5, 12, 0.29)
-    background: #000000
-  img
-    position: relative
-    z-index: 1
-    width: 120px
 
 .logo
-  text-transform: uppercase
-  text-align: center
-  color: #000
-  font-family: 'PalatinoLinotype', sans-serif
+  max-width: 414px
+  width: 100%
 
 .btn-burger
   position: absolute
-  top: 89px
+  top: 46px
   left: 117px
   z-index: 1
   cursor: pointer
@@ -188,6 +164,17 @@ h2
   color: #ef1649
   background: #ffffff
 
+svg
+  display: inline-block
+  width: 100%
+  height: 100%
+
+button
+  border: none
+  cursor: pointer
+  padding: 0
+  outline: none
+
 
 //header
 header
@@ -211,6 +198,22 @@ header
   .icon
     width: 22px
     margin: 0 12px 0 0
+    display: flex
+    align-content: center
+    justify-content: center
+    svg
+      fill: #ef1649
+
+.mail
+  .icon
+    width: 13px
+    height: 11px
+
+.phone
+  .icon
+    width: 12px
+    height: 12px
+
 
 .box-contacts
   text-align: right
@@ -278,6 +281,7 @@ main
     color: #ef1649
     font-size: 18px
     margin: 55px 0 0
+    max-width: 565px
 
 .btn-group
   display: flex
@@ -287,6 +291,9 @@ main
     margin: 0 15px 0 0
     &:last-child
       margin: 0
+
+.color-accent
+  color: #ef1649
 
 //advantages
 .advantages
@@ -344,6 +351,11 @@ strong
     align-items: center
     justify-content: center
     margin: 0 30px 0 0
+    svg
+      fill: #fff
+  &:first-child
+    p
+      max-width: 560px
 
 .advantages-wrapper
   display: flex
@@ -435,7 +447,6 @@ strong
 
 //tools
 .tools
-  padding: 201px 0 0
   h2
     text-align: center
   .description
@@ -529,6 +540,11 @@ strong
   .icon-arrow
     display: none
     margin: 17px auto 39px
+    width: 33px
+    height: 18px
+    svg
+      transform: rotate(180deg)
+      fill: #eb1547
   .text
     text-align: center
     color: #2b2b2b
@@ -566,7 +582,7 @@ strong
 //employees
 .employees
   position: relative
-  padding: 120px 0
+  padding: 140px 0
   .box-subtitle
     left: auto
     right: -140px
@@ -598,6 +614,10 @@ strong
     justify-content: center
     overflow: hidden
     position: relative
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
     &:before
       content: ''
       position: absolute
@@ -644,36 +664,34 @@ strong
   opacity: 1
   &:before
     display: none
+  svg
+    fill: #ef1649
+
 
 .slick-prev
-  background: url("../img/arr-l.png") no-repeat center
-    size: contain
   left: -106px
-  &:hover, &:focus
-    background: url("../img/arr-l.png") no-repeat center
-      size: contain
+  svg
+    transform: rotate(90deg)
 
 .slick-next
-  background: url("../img/arr-r.png") no-repeat center
-    size: contain
   right: -106px
-  &:hover, &:focus
-    background: url("../img/arr-r.png") no-repeat center
-      size: contain
+  svg
+    transform: rotate(-90deg)
+
 
 //portfolio
 .portfolio
-  padding: 140px 0 116px
+  padding: 140px 0 100px
   position: relative
   &:before
     content: ''
     position: absolute
-    right: 0
-    top: 0
-    height: 100%
-    width: 366px
-    background: #f6f6f6 no-repeat right top
-      size: cover
+    right: -193px
+    top: 102px
+    height: 450px
+    border-radius: 50%
+    width: 450px
+    background: #f6f6f6
   .container
     align-items: center
 
@@ -754,7 +772,7 @@ strong
 
 //turnkey-marketing
 .turnkey-marketing
-  padding: 157px 0
+  padding: 140px 0
 
 .turnkey-marketing__content
   display: flex
@@ -777,9 +795,12 @@ strong
       background: #ef1649
       width: 260px
       min-width: 260px
-      img
-        filter: brightness(0) invert(1)
+      svg
         opacity: 1
+        fill: #fff
+        g
+          fill: #fff
+
     .number
       display: block
     .turnkey-marketing__box-text
@@ -807,7 +828,7 @@ strong
   justify-content: center
   .icon
     max-width: 67px
-  img
+  svg
     opacity: .2
   .number
     position: absolute
@@ -874,6 +895,299 @@ strong
     color: #ef1649
 
 
+//footer
+footer
+  background: #181c1f
+  padding: 40px 0
+  color: #fff
+  .logo
+    max-width: 317px
+    margin: 0 0 22px
+  .container
+    justify-content: space-between
+    align-items: center
+  .mail, .phone
+    font-size: 23px
+    color: #fff
+    .icon
+      width: 15px
+      height: 15px
+  .links
+    font-size: 18px
+  .list-social
+    margin: 0
+    li
+      margin: 0 16px 0 0
+      a
+        width: 41px
+        height: 41px
+        padding: 10px
+
+.footer-menu
+  display: flex
+  flex-wrap: wrap
+  max-width: 350px
+  li
+    margin: 0 0 10px
+    width: 50%
+    &:last-child, &:nth-child(3)
+      margin: 0
+    a
+      color: #fff
+
+//orders
+.orders
+  background: #181c1f
+  position: relative
+  padding: 70px 0
+  .container
+    z-index: 1
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 87px
+    background: url("../img/ellipce1.png") no-repeat center
+      size: cover
+    width: 92px
+    height: 200px
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    background: url("../img/bg4.jpg") no-repeat center
+      size: cover
+    opacity: .05
+  h2
+    color: #fff
+    max-width: 770px
+  .description
+    color: #fff
+    margin: 37px 0 50px
+    text-transform: uppercase
+    max-width: 600px
+  .container
+    flex-direction: column
+    align-items: flex-start
+  .box-subtitle
+    transform: none
+    top: 128px
+    right: 0
+    left: auto
+    font-size: 130px
+    opacity: .1
+    .text
+      transform: none
+  .btn
+    margin: 0 auto
+    max-width: 447px
+    width: 100%
+    text-transform: uppercase
+
+.list-parameter
+  margin: 0 0 56px
+  li
+    margin: 0 0 21px
+    &:last-child
+      margin: 0
+
+
+
+.orders-wrapper
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: flex-start
+
+.checkbox
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  .checkbox-inp
+    display: none
+  .checkbox-custom
+    position: relative
+    width: 15px
+    height: 15px
+    display: inline-block
+    vertical-align: middle
+    border: none
+      radius: 3px
+    background: #ffffff
+    cursor: pointer
+    transition: .3s ease
+    margin: 0 15px 0 0
+
+  .label
+    display: inline-block
+    vertical-align: middle
+    color: #fff
+    font-size: 18px
+    font-weight: 500
+    font-family: $default-font
+    cursor: pointer
+  .checkbox-inp:checked + .checkbox-custom
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border-radius: 3px
+      background: #ef1649
+
+//section question
+.question-section
+  padding: 0 0 140px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: -89px
+    width: 184px
+    height: 200px
+    top: 212px
+    background: url("../img/ellipce2.png") no-repeat center
+      size: cover
+  &:after
+    content: ''
+    position: absolute
+    width: 75px
+    height: 97px
+    background: url("../img/ellipce3.png") no-repeat center
+      size: cover
+    right: 53px
+    bottom: 393px
+  h2
+    margin: 0 0 50px
+    max-width: 1080px
+  .container
+    z-index: 1
+
+.panel_heading
+  width: 100%
+  font-size: 18px
+  color: #2b2b2b
+  margin: 0 0 20px
+
+.block_title
+  width: 100%
+  position: relative
+  background: rgba(#e8eaee, .4)
+  text-transform: uppercase
+  font-weight: 700
+  padding: 31px 65px 31px 32px
+  cursor: pointer
+  &:before
+    content: '+'
+    position: absolute
+    right: 30px
+    top: 50%
+    transform: translate(0,-50%)
+    border-radius: 50%
+    width: 36px
+    height: 36px
+    background: #ef1649
+    font-size: 30px
+    font-weight: 700
+    text-transform: uppercase
+    transition: .3s ease
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #fff
+    text-align: center
+    line-height: 36px
+
+.in
+  &:before
+    content: '-'
+
+.block_hover
+  display: none
+  padding: 38px 0 0
+  line-height: 24px
+
+.text-right
+  text-align: right
+
+.box-statistics
+  color: #2b2b2b
+  font-size: 36px
+  font-weight: 700
+  opacity: .2
+  text-transform: uppercase
+  width: 100%
+  &:last-child
+    margin: 35px 0 0
+
+//sentence
+.sentence
+  padding: 103px 0 97px
+  position: relative
+  h2
+    margin: 0 0 29px
+  .box-subtitle
+    left: -180px
+    top: 470px
+
+.sentence-wrapper
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 49px 0 60px
+
+.sentence-image
+  max-width: 580px
+  width: 100%
+
+.form
+  max-width: 658px
+  width: 100%
+  button
+    width: 100%
+    height: 102px
+    border-radius: 51px
+
+label
+  width: 100%
+  display: block
+  margin: 0 0 19px
+
+input
+  width: 100%
+  outline: none
+  box-sizing: border-box
+  font-family: $default-font
+  border: none
+    radius: 51px
+  height: 103px
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.06)
+  background: #fff
+  padding: 0 52px
+  color: #2b2b2b
+  &::placeholder
+    color: #2b2b2b
+  &:valid
+    color: #2b2b2b
+  &:focus
+    color: #2b2b2b
+    &:valid, &:invalid
+      color: #2b2b2b
+
+.img-parallax
+  left: auto !important
+  right: 0
 
 
 

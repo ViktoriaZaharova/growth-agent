@@ -10,6 +10,9 @@
     .number
       font-size: 200px
 
+  .sentence .box-subtitle
+    left: -300px
+
 @media only screen and (max-width : 1770px)
   .employees .box-subtitle
     right: -240px
@@ -37,6 +40,12 @@
 
   .portfolio .container
     align-items: flex-start
+
+  .sentence .box-subtitle
+    left: -320px
+
+  .orders .box-subtitle
+    font-size: 100px
 
 @media only screen and (max-width : 1580px)
   .container
@@ -71,7 +80,7 @@
   .employee-box__photo
     width: 275px
     min-width: 275px
-    padding: 0 10px
+    //padding: 0 10px
     align-items: flex-end
 
   .employee-box__content
@@ -113,6 +122,9 @@
 
   .advantages:before, .portfolio:before
     width: 160px
+
+  .orders .box-subtitle
+    font-size: 70px
 
 
 @media only screen and (max-width : 1350px)
@@ -185,6 +197,26 @@
   .turnkey-marketing
     padding: 100px 0
 
+  .checkbox .label
+    font-size: 16px
+
+  .orders:after
+    bottom: 20px
+
+  footer .mail, footer .phone
+    font-size: 16px
+
+  footer .links
+    font-size: 14px
+
+  footer .list-social li a
+    width: 30px
+    height: 30px
+    padding: 7px
+
+  footer .logo
+    max-width: 250px
+
 
 @media only screen and (max-width : 1200px)
   .advantages:after
@@ -241,6 +273,12 @@
 
     background-position: center top
 
+  .list-parameter
+    margin: 0 0 30px
+
+  .list-parameter li
+    margin: 0 0 15px
+
 
 @media only screen and (max-width : 992px)
   main
@@ -288,8 +326,38 @@
   .tools-box__name
     font-size: 26px
 
+  input
+    height: 60px
+
+  .form
+    max-width: 400px
+    button
+      height: 60px
+
+  footer .logo
+    max-width: 200px
+
+  .footer-menu li a
+    font-size: 14px
+
+  .footer-menu
+    max-width: 290px
+
 
 /* Small Devices, Tablets */
+@media only screen and (max-width : 850px)
+  .footer-menu
+    max-width: none
+    width: 100%
+    order: 1
+    margin: 20px auto 0
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    li
+      width: auto
+      margin: 0
+
 @media only screen and (max-width : 800px)
   .marketing-slider .slick-center.slick-slide
     margin: 0 auto
@@ -305,6 +373,21 @@
 
   .contract-image
     margin: 40px auto 0
+
+  .img-parallax
+    max-width: 200px
+
+  .question-section:before, .question-section:after
+    display: none
+
+  .box-statistics
+    font-size: 20px
+    br
+      display: none
+
+  .orders:after
+    width: 60px
+    height: 125px
 
 @media only screen and (max-width : 768px)
   .man-text
@@ -343,8 +426,6 @@
   .tools-box
     height: 500px
 
-  .tools
-    padding: 100px 0 0
 
   .tools .description
     font-size: 20px
@@ -371,6 +452,27 @@
       font-size: 18px
       margin: 0 0 20px
 
+  .sentence-wrapper
+    flex-wrap: wrap
+    margin: 40px 0
+
+  .sentence
+    .description
+      br
+        display: none
+
+  .form
+    max-width: none
+    margin: 30px auto 0
+
+  .sentence-image
+    max-width: none
+
+  .orders .description
+    margin: 20px 0 30px
+
+  .logo
+    max-width: 214px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 670px)
@@ -409,6 +511,28 @@
   .turnkey-marketing__content .box-text
     width: 100%
 
+  .sentence
+    padding: 70px 0
+
+  .question-section
+    padding: 0 0 70px
+
+  .block_title
+    padding: 20px 60px 20px 20px
+    &:before
+      right: 20px
+
+  .panel_heading
+    font-size: 16px
+
+  .block_hover
+    padding: 25px 0 0
+
+  .question-section h2
+    margin: 0 0 30px
+
+  footer
+    padding: 20px 0
 
 @media only screen and (max-width : 575px)
   main
@@ -529,6 +653,28 @@
   .tools-box__name
     padding: 0 10px
 
+  .footer-box
+    width: 100%
+    margin: 0 auto 20px
+    text-align: center
+
+  footer
+    .logo
+      margin: 0 auto 20px
+
+
+
+@media only screen and (max-width : 510px)
+  .logo
+    margin: 0 auto 10px
+
+  header .container
+    flex-direction: column
+    align-items: center
+    .list-social
+      justify-content: center
+    .links
+      text-align: center
 
 @media only screen and (max-width : 480px)
   .mail .icon, .phone .icon
@@ -573,6 +719,11 @@
   .turnkey-marketing__box-text
     min-width: 360px
 
+  .footer-menu li
+    margin: 0 0 7px
+    &:last-child, &:nth-child(3)
+      margin: 0 0 7px
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 420px)
   .links, .mail, .phone
@@ -588,8 +739,6 @@
   .advantages:before, .portfolio:before
     width: 150px
 
-  .tools
-    padding: 50px 0 0
 
   .marketing-box .text
     max-width: 300px
@@ -630,4 +779,14 @@
 
   .turnkey-marketing__box-text
     min-width: 300px
+
+  footer .mail, footer .phone
+    font-size: 13px
+
+  footer .list-social li
+    margin: 0 10px 0 0
+    a
+      width: 25px
+      height: 25px
+      padding: 5px
 
