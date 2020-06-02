@@ -830,7 +830,10 @@ strong {
 
 .portfolio-img {
   margin: 6.5px 0 0 178px;
-  width: 862px; }
+  width: 862px;
+  max-height: 555px;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden; }
 
 .portfolio-content {
   max-width: 760px;
@@ -1430,7 +1433,8 @@ input {
     width: 990px;
     height: 524px; }
   .portfolio-img {
-    width: 650px; }
+    width: 650px;
+    max-height: 455px; }
   .portfolio-content h2 {
     margin: 0 0 20px; }
   .portfolio-content {
@@ -1619,7 +1623,8 @@ input {
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    border-radius: 13px 13px 0 0; }
   .portfolio-image__slider {
     width: 100%;
     height: 540px;
@@ -1676,7 +1681,12 @@ input {
   .footer-menu li a {
     font-size: 14px; }
   .footer-menu {
-    max-width: 290px; } }
+    max-width: 290px; }
+  .portfolio-image__slider {
+    width: 700px;
+    height: 380px; }
+  .portfolio-img {
+    max-height: 315px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 850px) {
@@ -1785,6 +1795,13 @@ input {
     max-width: 214px; } }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 700px) {
+  .portfolio-image__slider {
+    width: 500px;
+    height: 270px; }
+  .portfolio-img {
+    max-height: 220px; } }
+
 @media only screen and (max-width: 670px) {
   main {
     background-size: 300px; }
@@ -1942,6 +1959,14 @@ input {
   footer .logo {
     margin: 0 auto 20px; } }
 
+@media only screen and (max-width: 530px) {
+  .portfolio-image__slider {
+    width: 380px;
+    height: 200px; }
+  .portfolio-img {
+    max-height: 160px;
+    border-radius: 10px 10px 0 0; } }
+
 @media only screen and (max-width: 510px) {
   .logo {
     margin: 0 auto 10px; }
@@ -2032,7 +2057,13 @@ input {
   .contract-image {
     width: 100%; }
   .counter-slide {
-    font-size: 38px; } }
+    font-size: 38px; }
+  .portfolio-image__slider {
+    width: 290px;
+    height: 160px; }
+  .portfolio-img {
+    max-height: 125px;
+    border-radius: 5px 5px 0 0; } }
 
 @media only screen and (max-width: 360px) {
   .portfolio-image__slider {
