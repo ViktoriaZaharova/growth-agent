@@ -5,7 +5,7 @@ $('.tools-slider').slick({
     variableWidth: true,
     centerPadding: '0px',
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1500,
 });
 
 
@@ -18,8 +18,8 @@ slider
         variableWidth: true,
         infinite: true,
         focusOnSelect: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        // autoplay: true,
+        autoplaySpeed: 1500,
         responsive: [
             {
                 breakpoint: 768,
@@ -131,3 +131,17 @@ $('.panel_heading .block_title').click(function () {
 
 var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene);
+
+
+$("form").submit(function () {
+    $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize()
+    }).done(function () {
+        $(this).find("input").val("");
+        alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+        $("form").trigger("reset");
+    });
+    return false;
+});

@@ -656,7 +656,7 @@ strong {
     display: none; }
 
 .marketing-box__name {
-  margin: 0 120px 0 0;
+  margin: 0 auto;
   color: #2b2b2b;
   font-size: 36px;
   font-weight: bold;
@@ -665,7 +665,7 @@ strong {
 .marketing-slider {
   width: 100%; }
   .marketing-slider .slick-center.slick-slide {
-    margin: 0 -120px 0 -750px;
+    margin: 0 -50px 0 -20px;
     z-index: 1; }
     .marketing-slider .slick-center.slick-slide .text {
       display: block; }
@@ -1456,8 +1456,6 @@ input {
     padding: 0 20px; }
   .marketing-box .text {
     max-width: 1140px; }
-  .marketing-slider .slick-center.slick-slide {
-    margin: 0 -120px 0 -550px; }
   .contract-text {
     max-width: none;
     width: calc(100% - 400px); }
@@ -1592,7 +1590,7 @@ input {
   .marketing-box__name {
     font-size: 30px; }
   .marketing-slider .slick-center.slick-slide {
-    margin: 0 -100px 0 -250px; }
+    margin: 0 auto; }
   .employees h2 {
     margin: 0 0 40px; } }
 
@@ -1704,8 +1702,6 @@ input {
       margin: 0; } }
 
 @media only screen and (max-width: 800px) {
-  .marketing-slider .slick-center.slick-slide {
-    margin: 0 auto; }
   .marketing-box .text {
     max-width: 400px; }
   .marketing-box__name {
