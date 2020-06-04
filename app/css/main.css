@@ -1122,14 +1122,17 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 350px; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   .footer-menu li {
-    margin: 0 0 10px;
-    width: 50%; }
-    .footer-menu li:last-child, .footer-menu li:nth-child(3) {
+    margin: 0 0 8px; }
+    .footer-menu li:last-child {
       margin: 0; }
     .footer-menu li a {
-      color: #fff; }
+      color: #fff;
+      font-size: 14px; }
 
 .orders {
   background: #181c1f;
@@ -1694,10 +1697,6 @@ input {
       height: 60px; }
   footer .logo {
     max-width: 200px; }
-  .footer-menu li a {
-    font-size: 14px; }
-  .footer-menu {
-    max-width: 290px; }
   .portfolio-image__slider {
     width: 700px;
     height: 380px; }
@@ -1707,7 +1706,6 @@ input {
 /* Small Devices, Tablets */
 @media only screen and (max-width: 850px) {
   .footer-menu {
-    max-width: none;
     width: 100%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -2037,11 +2035,7 @@ input {
   .contract .description {
     margin: 20px 0 40px; }
   .turnkey-marketing__box-text {
-    min-width: 360px; }
-  .footer-menu li {
-    margin: 0 0 7px; }
-    .footer-menu li:last-child, .footer-menu li:nth-child(3) {
-      margin: 0 0 7px; } }
+    min-width: 360px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px) {
