@@ -847,6 +847,9 @@ strong {
 .portfolio-box {
   font-size: 18px;
   font-weight: 300; }
+  .portfolio-box h3 {
+    font-weight: bold;
+    margin: 0 0 10px; }
 
 .indicators {
   width: 100%;
@@ -1450,14 +1453,15 @@ input {
     left: -220px; }
   .portfolio-image__slider {
     width: 990px;
-    height: 524px; }
+    height: 524px;
+    margin: 0 -100px 0 -380px; }
   .portfolio-img {
     width: 650px;
     max-height: 455px; }
   .portfolio-content h2 {
     margin: 0 0 20px; }
   .portfolio-content {
-    max-width: 650px; }
+    max-width: 580px; }
   .portfolio .container {
     -webkit-box-align: start;
         -ms-flex-align: start;
