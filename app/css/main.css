@@ -1431,6 +1431,57 @@ input {
   left: auto !important;
   right: 0; }
 
+.mobile-menu {
+  position: fixed;
+  z-index: 7;
+  background: #fff;
+  max-width: 555px;
+  -webkit-box-shadow: 0px 14px 21px 0 rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 14px 21px 0 rgba(0, 0, 0, 0.07);
+  height: 100%;
+  width: 100%;
+  display: none; }
+
+.mobile-menu__wrapper {
+  height: 100%;
+  overflow-y: auto;
+  padding: 59px 104px 59px 244px; }
+  .mobile-menu__wrapper .list-social {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0 0 19px; }
+  .mobile-menu__wrapper .mail, .mobile-menu__wrapper .phone {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .mobile-menu__wrapper .box-contacts {
+    text-align: left; }
+    .mobile-menu__wrapper .box-contacts .links {
+      padding: 0 0 0 20px; }
+
+.overlay {
+  opacity: 0.9;
+  -webkit-box-shadow: 0 14px 21px 0 rgba(0, 0, 0, 0.07);
+          box-shadow: 0 14px 21px 0 rgba(0, 0, 0, 0.07);
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #fff;
+  z-index: 6;
+  position: fixed;
+  left: 0;
+  top: 0; }
+
+.menu li {
+  margin: 0 0 37px; }
+  .menu li a {
+    color: #2b2b2b;
+    font-size: 18px;
+    font-weight: 500; }
+    .menu li a:hover {
+      color: #ef1649; }
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1840px) {
   .advantages-number {
@@ -1601,7 +1652,15 @@ input {
     height: 30px;
     padding: 7px; }
   footer .logo {
-    max-width: 250px; } }
+    max-width: 250px; }
+  .mobile-menu {
+    max-width: 395px; }
+    .mobile-menu .btn-burger {
+      position: absolute;
+      left: 10px;
+      top: 30px; }
+  .mobile-menu__wrapper {
+    padding: 30px 40px 30px 120px; } }
 
 @media only screen and (max-width: 1200px) {
   .advantages:after {
@@ -2039,7 +2098,15 @@ input {
   .contract .description {
     margin: 20px 0 40px; }
   .turnkey-marketing__box-text {
-    min-width: 360px; } }
+    min-width: 360px; }
+  .mobile-menu__wrapper {
+    padding: 30px 30px 30px 85px; }
+  .mobile-menu {
+    max-width: 290px; }
+  .menu li {
+    margin: 0 0 20px; }
+    .menu li a {
+      font-size: 16px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px) {

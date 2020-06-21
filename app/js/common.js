@@ -145,3 +145,13 @@ $("form").submit(function () {
     });
     return false;
 });
+
+$('.btn-burger__close, .overlay').click(function () {
+   $('.mobile-menu').fadeOut();
+    $('.overlay').fadeOut();
+});
+
+$('.btn-burger__open').click(function () {
+    $('.overlay').fadeIn();
+    $('.mobile-menu').fadeIn();
+});
