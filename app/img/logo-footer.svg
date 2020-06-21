@@ -1,9 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2019 (64-Bit) -->
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1000mm" height="976.95mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
 viewBox="0 0 100000 97695"
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
  <defs>
-  <font id="FontID0" horiz-adv-x="643" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+  <font id="FontID0" horiz-adv-x="643" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
 	<font-face 
 		font-family="Verona">
 		<font-face-src>
@@ -22,24 +25,16 @@ viewBox="0 0 100000 97695"
   </font>
   <style type="text/css">
    <![CDATA[
-    @font-face { font-family:"Verona";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
-    .fil1 {fill:url(#id0)}
-    .fil0 {fill:url(#id1);fill-rule:nonzero}
+    @font-face { font-family:"Verona";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .fil1 {fill:white}
+    .fil0 {fill:white;fill-rule:nonzero}
     .fnt0 {font-weight:normal;font-size:10924.97px;font-family:'Verona'}
    ]]>
   </style>
-  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="38000.73" y1="3176.74" x2="38010.93" y2="94530.78">
-   <stop offset="0" style="stop-opacity:1; stop-color:black"/>
-   <stop offset="1" style="stop-opacity:1; stop-color:#1A1A1A"/>
-  </linearGradient>
-  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="38000.79" y1="3177.31" x2="38010.98" y2="94530.71">
-   <stop offset="0" style="stop-opacity:1; stop-color:black"/>
-   <stop offset="1" style="stop-opacity:1; stop-color:#323232"/>
-  </linearGradient>
  </defs>
  <g id="Слой_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2331634650112">
+  <g id="_2330081697216">
    <path class="fil0" d="M38000.79 3177.31l-30532.56 78534.38 40247.27 -22379.05 5315.27 13395.38 12288.28 0 -7473.88 -19027.89 42150.71 -23437.28 0 -10126.66 -45415.27 25252.5 -16579.82 -42211.38zm-238.97 30804.65l6661.8 17054.52 -16958.42 9429.42 10296.62 -26483.94z"/>
    <text x="2170.28" y="94530.85"  class="fil1 fnt0">АГЕНТ РОСТА</text>
   </g>

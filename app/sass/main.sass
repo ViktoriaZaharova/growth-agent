@@ -153,16 +153,25 @@ h2
   box-shadow: 10.6px 5.6px 18px 0 rgba(239, 22, 73, 0.2)
   background: #ef1649
   color: #fff
+  &:hover
+    background: #fff
+    color: #ef1649
 
 .btn-border
   box-shadow: 10.6px 5.6px 18px 0 rgba(239, 22, 73, 0.2)
   border: solid 2px #ef1649
   color: #ef1649
   background: #fff
+  &:hover
+    color: #fff
+    background: #ef1649
 
 .btn-white
   color: #ef1649
   background: #ffffff
+  &:hover
+    color: #fff
+    background: #ef1649
 
 svg
   display: inline-block
@@ -254,7 +263,10 @@ main
   .btn
     width: 385px
 
-
+.description-company
+  font-size: 18px
+  max-width: 481px
+  line-height: 1.33
 
 .box-subtitle
   color: #dadada
@@ -320,12 +332,17 @@ main
     background: url("../img/ellipce1.png") no-repeat center
       size: contain
   h2
+    font-size: 36px
     margin: 0 0 39px
   .description
-    margin: 39px 0 85px
+    margin: 0 0 54px
     max-width: 1215px
   .line-bottom
     margin: -30px 0 0
+  h6
+    margin: 0 0 34px
+    font-size: 36px
+    font-weight: bold
 
 strong
   display: inline
@@ -339,23 +356,19 @@ strong
 .advantages-box
   display: flex
   align-items: center
-  margin: 0 0 85px
+  margin: 0 0 26px
   font-size: 24px
   font-weight: 500
-  p
-    max-width: 290px
+  width: 100%
   .icon
-    width: 60px
-    height: 60px
+    width: 36px
+    height: 36px
     display: flex
     align-items: center
     justify-content: center
-    margin: 0 30px 0 0
+    margin: 0 24px 0 0
     svg
       fill: #fff
-  &:first-child
-    p
-      max-width: 560px
 
 .advantages-wrapper
   display: flex
@@ -436,14 +449,21 @@ strong
     &:before
       min-width: 58px
   .btn
-    margin: 0 0 0 50px
+    margin: 0 20px 0 0
+    &:last-child
+      margin: 0
 
 
 .contract-text
   max-width: 800px
 
 .contract-image
-  width: 504px
+  width: 406px
+  height: 406px
+  display: flex
+  align-items: center
+  justify-content: center
+
 
 //tools
 .tools
@@ -457,127 +477,7 @@ strong
     strong
       color: #eb1547
 
-.horizontal-scroll-wrapper
-  overflow-y: hidden
-  white-space: nowrap
 
-.tools-slider
-  .box-wrap
-    display: flex
-    align-items: stretch
-    justify-content: space-between
-
-.slick-slide
-  outline: none
-
-.tools-box
-  white-space: normal
-  position: relative
-  height: 830px
-  display: flex
-  align-items: center
-  justify-content: center
-  min-width: 635px
-  width: 635px
-  img
-    width: 100%
-    height: 100%
-    object-fit: cover
-
-  &:before
-    content: ''
-    position: absolute
-    left: 0
-    top: 0
-    background: #181c1f
-    opacity: .4
-    width: 100%
-    height: 100%
-
-.maxHeight
-  height: 100vh
-  .box-wrap
-    height: 100%
-  .tools-box
-    height: 100%
-
-.tools-box__name
-  position: absolute
-  left: 50%
-  top: 50%
-  transform: translate(-50%,-50%)
-  z-index: 2
-  padding: 0 10px
-  width: 100%
-  color: #fff
-  font-size: 48px
-  font-weight: bold
-  text-align: center
-
-//marketing
-.marketing
-  padding: 76px 0 84px
-  background: url("../img/bg3.jpg") no-repeat center
-    size: cover
-  .btn
-    margin: 43px auto 0
-    width: 447px
-    text-transform: uppercase
-
-.title-img
-  margin: 0 auto 46px
-  display: flex
-  align-items: center
-  justify-content: center
-
-.marketing-box
-  position: relative
-  padding: 0 40px 0
-  display: flex
-  flex-direction: column
-  align-items: flex-end
-
-  .icon-arrow
-    display: none
-    margin: 17px auto 39px
-    width: 33px
-    height: 18px
-    svg
-      transform: rotate(180deg)
-      fill: #eb1547
-  .text
-    text-align: center
-    color: #2b2b2b
-    font-size: 18px
-    max-width: 1362px
-    width: 100%
-    margin: 0 auto
-    display: none
-
-.marketing-box__name
-  margin: 0 auto
-  color: #2b2b2b
-  font-size: 36px
-  font-weight: bold
-  text-align: center
-
-
-.marketing-slider
-  width: 100%
-  .slick-center.slick-slide
-    margin: 0 -50px 0 -20px
-    z-index: 1
-    .text
-      display: block
-    .icon-arrow
-      display: flex
-      align-items: center
-      justify-content: center
-    .marketing-box__name
-      color: #eb1547
-  .slick-slide
-    z-index: 2
-    position: relative
 
 //employees
 .employees
@@ -585,18 +485,24 @@ strong
   padding: 140px 0
   .box-subtitle
     left: auto
-    right: -140px
-    transform: rotate(-90deg)
+    right: -200px
+    transform: rotate(-90deg) translate(0,-50%)
+    position: fixed
+    z-index: 7
+    top: 50%
     .text
       transform: rotate(180deg)
   h2
     max-width: 1060px
     margin: 0 0 60px
 
+
 .employee-box__wrapper
   display: flex
-  flex-direction: column
-  align-items: flex-start
+  width: 100%
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: stretch
 
 .employee-box
   display: flex
@@ -610,7 +516,7 @@ strong
     height: 341px
     background: #f6f6f6
     display: flex
-    align-items: center
+    align-items: flex-start
     justify-content: center
     overflow: hidden
     position: relative
@@ -622,13 +528,14 @@ strong
       content: ''
       position: absolute
       top: 50%
-      right: 0
-      width: 0
-      height: 0
       border-top: 17.5px solid transparent
-      border-right: 30px solid #fff
+      border-left: 30px solid #fff
+      border-right: none
       border-bottom: 17.5px solid transparent
-      transform: rotate(0,-50%)
+      right: auto
+      left: 0
+
+
   &__content
     padding: 30px 33px 30px 25px
     width: 341px
@@ -643,18 +550,18 @@ strong
     font-size: 18px
     font-weight: 500
     font-style: italic
-  &:nth-child(2)
+  &:nth-child(3), &:nth-child(4), &:nth-child(7), &:nth-child(8)
     .employee-box__photo
       &:before
+        right: 0
+        left: auto
+        width: 0
+        height: 0
+        border-left: none
         border-top: 17.5px solid transparent
-        border-left: 30px solid #fff
-        border-right: none
+        border-right: 30px solid #fff
         border-bottom: 17.5px solid transparent
-        right: auto
-        left: 0
-
-.employees-slider
-  width: 100%
+        transform: rotate(0,-50%)
 
 .slick-arrow
   z-index: 1
@@ -681,50 +588,10 @@ strong
 
 //portfolio
 .portfolio
-  padding: 140px 0 100px
-  position: relative
-  &:before
-    content: ''
-    position: absolute
-    right: -193px
-    top: 102px
-    height: 450px
-    border-radius: 50%
-    width: 450px
-    background: #f6f6f6
-  .container
-    align-items: center
-
-.portfolio-image__slider
-  width: 1231px
-  height: 653px
-  background: url("../img/macbook.png") no-repeat center
-    size: 100%
-  margin: 0 -100px 0 -535px
+  padding: 140px 0
   position: relative
 
-.portfolio-img
-  margin: 6.5px 0 0 178px
-  width: 862px
-  max-height: 555px
-  border-radius: 25px 25px 0 0
-  overflow: hidden
 
-.portfolio-content
-  max-width: 760px
-  width: 100%
-  position: relative
-  z-index: 1
-  h2
-    margin: 0 0 49px
-    max-width: 480px
-
-.portfolio-box
-  font-size: 18px
-  font-weight: 300
-  h3
-    font-weight: bold
-    margin: 0 0 10px
 
 .indicators
   width: 100%
@@ -745,121 +612,6 @@ strong
       color: #ef1649
       font-weight: bold
       margin: 0 22px 0 0
-
-.portfolio-nav
-  width: 100%
-  display: flex
-  align-items: center
-  justify-content: space-between
-  margin: 35px 0 0
-  .slick-arrow
-    position: relative
-    top: 0
-    transform: translate(0)
-    left: 0
-    right: 0
-    width: auto
-    height: auto
-    background: transparent
-    display: flex
-    align-items: center
-    color: #ef1649
-    font-size: 18px
-    font-weight: 300
-    line-height: normal
-    &:hover, &:focus
-      background: transparent
-  .slick-next
-    span
-      margin: 0 16px 0 0
-  .slick-prev
-    span
-      margin: 0 0 0 16px
-
-//turnkey-marketing
-.turnkey-marketing
-  padding: 140px 0
-
-.turnkey-marketing__content
-  display: flex
-  align-items: center
-  position: relative
-  z-index: 1
-  .box-text
-    max-width: 590px
-  .description
-    margin: 30px 0 0
-
-.turnkey-marketing__slider
-  width: 100%
-  margin: -275px 0 0
-  .slick-slide.slick-current
-    margin: 330px 0 0 66px
-    .turnkey-marketing__box
-      margin: 0 0 0 35px
-    .turnkey-marketing__box-icon
-      background: #ef1649
-      width: 260px
-      min-width: 260px
-      svg
-        opacity: 1
-        fill: #fff
-        g
-          fill: #fff
-
-    .number
-      display: block
-    .turnkey-marketing__box-text
-      display: block
-  .slick-slide.slick-current~.slick-slide
-    margin: 0 0 330px 0
-  .slick-slide.slick-current+.slick-slide
-    margin: 0 0 330px 35px
-  .slick-slide
-    margin: 330px 0 0 0
-    width: 260px
-
-
-.turnkey-marketing__box
-  display: flex
-  align-items: stretch
-
-.turnkey-marketing__box-icon
-  background: rgba(#e8eaee, .4)
-  position: relative
-  width: 100%
-  height: 260px
-  display: flex
-  align-items: center
-  justify-content: center
-  .icon
-    max-width: 67px
-  svg
-    opacity: .2
-  .number
-    position: absolute
-    top: 35px
-    left: 25px
-    color: rgba(43, 43, 43, 0.2)
-    font-size: 24px
-    font-weight: bold
-    display: none
-
-.turnkey-marketing__box-text
-  min-width: 536px
-  padding: 30px 55px
-  display: none
-  h3
-    margin: 0 0 28px
-    font-size: 24px
-    font-weight: bold
-
-.turnkey-marketing__nav
-  width: 260px
-  height: 260px
-  display: flex
-  flex-direction: column
-  align-items: center
 
 
 .nav-slide
@@ -904,11 +656,11 @@ strong
 //footer
 footer
   background: #181c1f
-  padding: 40px 0
+  padding: 20px 0 17px
   color: #fff
   .logo
-    max-width: 317px
-    margin: 0 0 22px
+    max-width: 120px
+    margin: 0 auto 15px
   .container
     justify-content: space-between
     align-items: center
@@ -922,6 +674,7 @@ footer
     font-size: 18px
   .list-social
     margin: 0
+    justify-content: center
     li
       margin: 0 16px 0 0
       a
@@ -929,26 +682,37 @@ footer
         height: 41px
         padding: 10px
 
+.copyright
+  font-size: 10px
+  color: rgba(255, 255, 255, 0.2)
+  font-weight: 300
+  text-align: center
+
 .doc
-  width: 100%
-  display: flex
-  align-items: center
-  justify-content: space-between
-  flex-wrap: wrap
-  margin: 15px auto 0
-  font-size: 12px
+  p
+    margin: 34px auto 0
+    font-size: 14px
+    color: rgba(255, 255, 255, 0.4)
 
 .footer-menu
   display: flex
   flex-wrap: wrap
-  flex-direction: column
+  align-items: center
+  max-width: 520px
+  width: 100%
   li
-    margin: 0 0 8px
-    &:last-child
-      margin: 0
+    width: 165px
+    margin: 0 50px 25px 0
+    //&:last-child, &:nth-child(4)
+    //  margin-bottom: 0
+    &:nth-child(3)
+      width: auto
+      margin-right: 0
     a
       color: #fff
-      font-size: 14px
+      font-size: 18px
+      &:hover
+        color: #ef1649
 
 //orders
 .orders
@@ -1064,29 +828,31 @@ footer
 .question-section
   padding: 0 0 140px
   position: relative
-  &:before
-    content: ''
-    position: absolute
-    left: -89px
-    width: 184px
-    height: 200px
-    top: 212px
-    background: url("../img/ellipce2.png") no-repeat center
-      size: cover
-  &:after
-    content: ''
-    position: absolute
-    width: 75px
-    height: 97px
-    background: url("../img/ellipce3.png") no-repeat center
-      size: cover
-    right: 53px
-    bottom: 393px
   h2
     margin: 0 0 50px
     max-width: 1080px
   .container
     z-index: 1
+  .sentence-image1
+    left: -89px
+    top: 212px
+    position: absolute
+    .img-parallax
+      width: 184px
+      height: 200px
+      background: url("../img/ellipce2.png") no-repeat center
+        size: cover
+  .sentence-image2
+    position: absolute
+    right: 53px
+    bottom: 393px
+    .img-parallax
+      margin: 0 0 0 auto
+      width: 75px
+      height: 97px
+      background: url("../img/ellipce3.png") no-repeat center
+        size: cover
+
 
 .panel_heading
   width: 100%
@@ -1147,10 +913,11 @@ footer
 
 //sentence
 .sentence
-  padding: 103px 0 97px
+  padding: 103px 0 127px
   position: relative
   h2
-    margin: 0 0 29px
+    margin: 0 0 86px
+    max-width: 890px
   .box-subtitle
     left: -180px
     top: 470px
@@ -1173,6 +940,7 @@ footer
     width: 100%
     height: 102px
     border-radius: 51px
+    font-size: 24.5px
 
 label
   width: 100%
@@ -1252,7 +1020,13 @@ input
       &:hover
         color: #ef1649
 
+.tabs__content
+  display: none /* по умолчанию прячем все блоки */
+  flex-direction: column
+  align-items: flex-start
 
+.tabs__content.active
+  display: flex /* по умолчанию показываем нужный блок */
 
 @import "media"
 // Всегда в конце
