@@ -117,7 +117,7 @@ h2
 
 
 .logo
-  max-width: 414px
+  max-width: 166px
   width: 100%
 
 .btn-burger
@@ -183,6 +183,7 @@ button
   cursor: pointer
   padding: 0
   outline: none
+  transition: .3s ease
 
 
 //header
@@ -267,6 +268,7 @@ main
   font-size: 18px
   max-width: 481px
   line-height: 1.33
+  margin: 0 auto 0 34px
 
 .box-subtitle
   color: #dadada
@@ -477,6 +479,46 @@ strong
     strong
       color: #eb1547
 
+//callback
+.callback
+  position: relative
+  background: #ef1649
+  color: #fff
+  padding: 80px 0
+  .description
+    font-size: 29px
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    opacity: .2
+    background: url("../img/bg3.jpg") no-repeat center
+      size: cover
+    width: 100%
+    height: 100%
+  label
+    width: calc(100% - 320px)
+    margin: 0
+  input
+    height: 70px
+    color: #2b2b2b
+    font-size: 16px
+    width: 100%
+  form
+    margin: 30px 0 0
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    button
+      height: 70px
+      width: 292px
+      margin: 0
+
+
 
 
 //employees
@@ -590,8 +632,79 @@ strong
 .portfolio
   padding: 140px 0
   position: relative
+  h2
+    text-align: center
+  .btn
+    margin: 0 auto
 
+.portfolio-wrapper
+  width: 100%
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 79px 0 60px
 
+.portfolio-box
+  position: relative
+  width: 25%
+  height: 480px
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  cursor: pointer
+  &:hover
+    .portfolio-box__content
+      opacity: 1
+      visibility: visible
+
+.portfolio-box__photo
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.portfolio-box__content
+  position: absolute
+  z-index: 2
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  background: #ef1649
+  padding: 87px 29px 63px
+  color: #fff
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  transition: .3s ease
+  opacity: 0
+  visibility: hidden
+  h3
+    font-size: 30px
+    font-weight: bold
+    width: 100%
+    text-align: center
+  .text
+    margin: 35px auto auto
+    font-size: 19px
+    font-weight: 500
+    line-height: 1.26
+
+.fancybox-photo
+  line-height: 1.26
+  font-size: 19px
+  font-weight: bold
+  color: #fff
+  text-decoration: underline
+  margin: 0 auto
 
 .indicators
   width: 100%
@@ -968,6 +1081,8 @@ input
     color: #2b2b2b
     &:valid, &:invalid
       color: #2b2b2b
+
+
 
 .img-parallax
   left: auto !important

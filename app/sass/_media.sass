@@ -77,6 +77,20 @@
   .orders .box-subtitle
     font-size: 70px
 
+  .footer-menu
+    max-width: 350px
+    justify-content: space-between
+    li
+      width: 50%
+      margin: 0 0 10px
+
+  .contract
+    .btn-group
+      flex-direction: column
+      align-items: center
+    .btn
+      margin: 0 0 10px
+
 
 @media only screen and (max-width : 1350px)
   .advantages-box
@@ -133,8 +147,6 @@
     height: 30px
     padding: 7px
 
-  footer .logo
-    max-width: 250px
 
   .mobile-menu
     max-width: 395px
@@ -173,6 +185,13 @@
 
   .list-parameter li
     margin: 0 0 15px
+
+  .description-company
+    font-size: 14px
+    max-width: 380px
+
+  .logo
+    max-width: 120px
 
 
 @media only screen and (max-width : 992px)
@@ -227,22 +246,30 @@
       height: 60px
 
   footer .logo
-    max-width: 200px
+    max-width: 90px
 
+  .footer-menu
+    max-width: 280px
+    li a
+      font-size: 14px
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 850px)
   .footer-menu
     width: 100%
+    max-width: none
     order: 1
     margin: 20px auto 0
     flex-direction: row
     align-items: center
     justify-content: space-between
     li
-      width: auto
       margin: 0
+      width: 50%
+
+  .description-company
+    display: none
 
 @media only screen and (max-width : 800px)
 
@@ -266,6 +293,9 @@
   .orders:after
     width: 60px
     height: 125px
+
+  .contract .btn-group
+    margin: 0 auto
 
 @media only screen and (max-width : 768px)
   .man-text
@@ -326,9 +356,8 @@
   .orders .description
     margin: 20px 0 30px
 
-  .logo
-    max-width: 214px
-
+  .form button
+    font-size: 18px
 
 @media only screen and (max-width : 670px)
   main
@@ -396,13 +425,12 @@
     height: 60px
     padding: 10px
 
-  .logo
-    font-size: 14px
 
   .mail, .phone
     font-size: 16px
 
-
+  .logo
+    max-width: 100px
 
   .advantages-box
     width: 100%
@@ -482,15 +510,7 @@
 
 @media only screen and (max-width : 510px)
   .logo
-    margin: 0 auto 10px
-
-  header .container
-    flex-direction: column
-    align-items: center
-    .list-social
-      justify-content: center
-    .links
-      text-align: center
+    margin: 0 auto 10px 0
 
 @media only screen and (max-width : 480px)
   .mail .icon, .phone .icon
@@ -516,7 +536,6 @@
 
 
   .contract .btn
-    margin: 0
     width: 100%
 
   .contract .description
@@ -534,6 +553,13 @@
       margin: 0 0 20px
       a
         font-size: 16px
+
+  .doc p
+    font-size: 10px
+    margin: 20px 0 0
+
+  .contract .btn-group
+    width: 100%
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 420px)
@@ -564,15 +590,22 @@
   .counter-slide
     font-size: 38px
 
+  footer .mail, footer .phone
+    font-size: 12px
+    .icon
+      width: 12px
+      height: 12px
 
+  .doc p
+    font-size: 8px
+    margin: 10px 0 0
 
 @media only screen and (max-width : 360px)
   .question
     font-size: 16px
 
 
-  footer .mail, footer .phone
-    font-size: 13px
+
 
   footer .list-social li
     margin: 0 10px 0 0
@@ -580,4 +613,7 @@
       width: 25px
       height: 25px
       padding: 5px
+
+  .logo
+    max-width: 80px
 

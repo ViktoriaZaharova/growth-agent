@@ -121,7 +121,7 @@ h2 {
   position: relative; }
 
 .logo {
-  max-width: 414px;
+  max-width: 166px;
   width: 100%; }
 
 .btn-burger {
@@ -195,7 +195,9 @@ button {
   border: none;
   cursor: pointer;
   padding: 0;
-  outline: none; }
+  outline: none;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
 
 header {
   padding: 6px 0;
@@ -301,7 +303,8 @@ main {
 .description-company {
   font-size: 18px;
   max-width: 481px;
-  line-height: 1.33; }
+  line-height: 1.33;
+  margin: 0 auto 0 34px; }
 
 .box-subtitle {
   color: #dadada;
@@ -562,6 +565,52 @@ strong {
   .tools .description strong {
     color: #eb1547; }
 
+.callback {
+  position: relative;
+  background: #ef1649;
+  color: #fff;
+  padding: 80px 0; }
+  .callback .description {
+    font-size: 29px; }
+  .callback:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: .2;
+    background: url("../img/bg3.jpg") no-repeat center;
+      background-size: cover;
+    width: 100%;
+    height: 100%; }
+  .callback label {
+    width: calc(100% - 320px);
+    margin: 0; }
+  .callback input {
+    height: 70px;
+    color: #2b2b2b;
+    font-size: 16px;
+    width: 100%; }
+  .callback form {
+    margin: 30px 0 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .callback form button {
+      height: 70px;
+      width: 292px;
+      margin: 0; }
+
 .employees {
   position: relative;
   padding: 140px 0; }
@@ -687,6 +736,106 @@ strong {
 .portfolio {
   padding: 140px 0;
   position: relative; }
+  .portfolio h2 {
+    text-align: center; }
+  .portfolio .btn {
+    margin: 0 auto; }
+
+.portfolio-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 79px 0 60px; }
+
+.portfolio-box {
+  position: relative;
+  width: 25%;
+  height: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  cursor: pointer; }
+  .portfolio-box:hover .portfolio-box__content {
+    opacity: 1;
+    visibility: visible; }
+
+.portfolio-box__photo {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .portfolio-box__photo img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.portfolio-box__content {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #ef1649;
+  padding: 87px 29px 63px;
+  color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  opacity: 0;
+  visibility: hidden; }
+  .portfolio-box__content h3 {
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center; }
+  .portfolio-box__content .text {
+    margin: 35px auto auto;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.26; }
+
+.fancybox-photo {
+  line-height: 1.26;
+  font-size: 19px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 auto; }
 
 .indicators {
   width: 100%;
@@ -1255,7 +1404,25 @@ input {
   .advantages:before {
     width: 160px; }
   .orders .box-subtitle {
-    font-size: 70px; } }
+    font-size: 70px; }
+  .footer-menu {
+    max-width: 350px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .footer-menu li {
+      width: 50%;
+      margin: 0 0 10px; }
+  .contract .btn-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .contract .btn {
+    margin: 0 0 10px; } }
 
 @media only screen and (max-width: 1350px) {
   .advantages-box {
@@ -1299,8 +1466,6 @@ input {
     width: 30px;
     height: 30px;
     padding: 7px; }
-  footer .logo {
-    max-width: 250px; }
   .mobile-menu {
     max-width: 395px; }
     .mobile-menu .btn-burger {
@@ -1330,7 +1495,12 @@ input {
   .list-parameter {
     margin: 0 0 30px; }
   .list-parameter li {
-    margin: 0 0 15px; } }
+    margin: 0 0 15px; }
+  .description-company {
+    font-size: 14px;
+    max-width: 380px; }
+  .logo {
+    max-width: 120px; } }
 
 @media only screen and (max-width: 992px) {
   main {
@@ -1373,12 +1543,17 @@ input {
     .form button {
       height: 60px; }
   footer .logo {
-    max-width: 200px; } }
+    max-width: 90px; }
+  .footer-menu {
+    max-width: 280px; }
+    .footer-menu li a {
+      font-size: 14px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 850px) {
   .footer-menu {
     width: 100%;
+    max-width: none;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -1394,8 +1569,10 @@ input {
         -ms-flex-pack: justify;
             justify-content: space-between; }
     .footer-menu li {
-      width: auto;
-      margin: 0; } }
+      margin: 0;
+      width: 50%; }
+  .description-company {
+    display: none; } }
 
 @media only screen and (max-width: 800px) {
   .contract-text {
@@ -1412,7 +1589,9 @@ input {
       display: none; }
   .orders:after {
     width: 60px;
-    height: 125px; } }
+    height: 125px; }
+  .contract .btn-group {
+    margin: 0 auto; } }
 
 @media only screen and (max-width: 768px) {
   .man-text {
@@ -1456,8 +1635,8 @@ input {
     max-width: none; }
   .orders .description {
     margin: 20px 0 30px; }
-  .logo {
-    max-width: 214px; } }
+  .form button {
+    font-size: 18px; } }
 
 @media only screen and (max-width: 670px) {
   main {
@@ -1505,10 +1684,10 @@ input {
     width: 80px;
     height: 60px;
     padding: 10px; }
-  .logo {
-    font-size: 14px; }
   .mail, .phone {
     font-size: 16px; }
+  .logo {
+    max-width: 100px; }
   .advantages-box {
     width: 100%; }
   .advantages {
@@ -1574,21 +1753,7 @@ input {
 
 @media only screen and (max-width: 510px) {
   .logo {
-    margin: 0 auto 10px; }
-  header .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    header .container .list-social {
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-    header .container .links {
-      text-align: center; } }
+    margin: 0 auto 10px 0; } }
 
 @media only screen and (max-width: 480px) {
   .mail .icon, .phone .icon {
@@ -1613,7 +1778,6 @@ input {
       margin: 0 0 10px;
       width: 100%; }
   .contract .btn {
-    margin: 0;
     width: 100%; }
   .contract .description {
     margin: 20px 0 40px; }
@@ -1624,7 +1788,12 @@ input {
   .menu li {
     margin: 0 0 20px; }
     .menu li a {
-      font-size: 16px; } }
+      font-size: 16px; }
+  .doc p {
+    font-size: 10px;
+    margin: 20px 0 0; }
+  .contract .btn-group {
+    width: 100%; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px) {
@@ -1646,16 +1815,24 @@ input {
   .contract-image {
     width: 100%; }
   .counter-slide {
-    font-size: 38px; } }
+    font-size: 38px; }
+  footer .mail, footer .phone {
+    font-size: 12px; }
+    footer .mail .icon, footer .phone .icon {
+      width: 12px;
+      height: 12px; }
+  .doc p {
+    font-size: 8px;
+    margin: 10px 0 0; } }
 
 @media only screen and (max-width: 360px) {
   .question {
     font-size: 16px; }
-  footer .mail, footer .phone {
-    font-size: 13px; }
   footer .list-social li {
     margin: 0 10px 0 0; }
     footer .list-social li a {
       width: 25px;
       height: 25px;
-      padding: 5px; } }
+      padding: 5px; }
+  .logo {
+    max-width: 80px; } }
