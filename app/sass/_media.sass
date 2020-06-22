@@ -25,19 +25,19 @@
   .box-subtitle
     left: -220px
 
-
-
   .sentence .box-subtitle
     left: -320px
 
   .orders .box-subtitle
     font-size: 100px
 
+  .advantages-wrapper
+    margin: 0 0 30px
+
 @media only screen and (max-width : 1580px)
   .container
     padding: 0 20px
     max-width: 1140px
-
 
   .contract-text
     max-width: none
@@ -52,7 +52,6 @@
   .employee-box__photo
     width: 275px
     min-width: 275px
-    //padding: 0 10px
     align-items: flex-end
 
   .employee-box__content
@@ -85,11 +84,36 @@
       margin: 0 0 10px
 
   .contract
-    .btn-group
-      flex-direction: column
-      align-items: center
     .btn
-      margin: 0 0 10px
+      width: 280px
+
+  .tabs__content1 .tools-photo
+    max-width: 570px
+
+  .tabs__caption
+    padding: 0
+
+  .list-cube li
+    margin: 0 0 10px
+
+  .list-cube, .tools-description
+    font-size: 16px
+
+  .tools-title
+    font-size: 30px
+
+  .description-tools
+    font-size: 14px
+    width: 200px
+    height: 200px
+    padding: 30px 20px
+    top: -107px
+
+  .tabs__content-wrap
+    width: calc(100% - 600px)
+
+  .tools-photo
+    max-width: 550px
 
 
 @media only screen and (max-width : 1350px)
@@ -172,12 +196,28 @@
     h2
       margin: 0 0 40px
 
+  .tabs__caption li
+    padding: 15px 25px
+    font-size: 14px
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1150px)
   .employee-box__content
-    width: calc(100% - 275px)
     min-width: auto
+    width: 100%
+
+  .employee-box
+    width: 100%
+
+  .tools .sentence-image1
+    max-width: 565px
+    .img-parallax
+      width: 565px
+      height: 565px
+
+  .tools .sentence-image2
+    right: 115px
 
 @media only screen and (max-width : 1100px)
   .list-parameter
@@ -192,6 +232,14 @@
 
   .logo
     max-width: 120px
+
+  .contract
+    .btn-group
+      flex-direction: column
+      align-items: center
+    .btn
+      width: 290px
+      margin: 0 0 10px
 
 
 @media only screen and (max-width : 992px)
@@ -252,6 +300,63 @@
     max-width: 280px
     li a
       font-size: 14px
+
+  .tabs__content1 .tools-photo
+    max-width: 370px
+
+  .description-tools
+    font-size: 10px
+    width: 150px
+    height: 150px
+    top: -87px
+
+  .tools-title
+    font-size: 24px
+
+  .list-cube, .tools-description
+    font-size: 14px
+
+  .list-cube li
+    padding: 0 0 0 30px
+    &:before
+      width: 12px
+      height: 12px
+
+  .tabs__caption
+    justify-content: space-around
+    li
+      margin: 0 0 10px
+
+  .tools-photo
+    max-width: 370px
+
+  .tabs__content-wrap
+    width: calc(100% - 370px)
+
+  .tools
+    padding: 70px 0 0
+
+  .portfolio-box
+    width: 50%
+    height: 380px
+
+  .portfolio-box__content
+    padding: 30px 20px
+    font-size: 14px
+    h3
+      font-size: 18px
+    .text
+      font-size: 14px
+
+  .fancybox-photo
+    font-size: 18px
+
+  .portfolio
+    padding: 70px 0
+
+  .portfolio-wrapper
+    margin: 40px 0 30px
+
 
 
 /* Small Devices, Tablets */
@@ -359,6 +464,38 @@
   .form button
     font-size: 18px
 
+  .list-cube
+    max-width: none
+
+  .tabs__content1 .tools-photo, .tools-photo
+    max-width: 290px
+    margin: 20px auto 0
+    display: none
+
+  .tabs__content1 .tools-photo
+    margin: 100px auto 0
+
+  .tabs__content-wrap
+    .d-mobile.tools-photo
+      display: flex
+
+  .tabs__content-wrap
+    width: 100%
+
+
+  .callback label
+    width: 100%
+    margin: 0 auto 30px
+
+  .callback form button
+    margin: 0 auto
+
+  .callback .description
+    font-size: 18px
+
+  .tools .sentence-image
+    display: none
+
 @media only screen and (max-width : 670px)
   main
     -webkit-background-size: 300px
@@ -401,6 +538,36 @@
 
   footer
     padding: 20px 0
+
+  .modal__div .modal__wrapper
+    padding: 30px
+    h2
+      font-size: 24px
+    form
+      label
+        input
+          padding: 0 25px
+
+  .modal__close
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 15px
+    height: 15px
+    z-index: 1
+    cursor: pointer
+    &:before, &:after
+      content: ''
+      position: absolute
+      width: 2px
+      height: 100%
+      border-radius: 4px
+      background: #000
+    &:before
+      transform: rotate(135deg)
+    &:after
+      transform: rotate(40deg)
+
 
 @media only screen and (max-width : 575px)
   main
@@ -465,7 +632,7 @@
         right: 17.5px solid transparent
         bottom: 30px solid #fff
 
-  .employee-box:nth-child(2) .employee-box__photo:before
+  .employee-box:nth-child(2) .employee-box__photo:before, .employee-box:nth-child(3) .employee-box__photo:before, .employee-box:nth-child(4) .employee-box__photo:before, .employee-box:nth-child(7) .employee-box__photo:before, .employee-box:nth-child(8) .employee-box__photo:before
     left: 50%
     bottom: 0
     top: auto
@@ -506,7 +673,8 @@
     .logo
       margin: 0 auto 20px
 
-
+  .callback input, .callback form button
+    height: 60px
 
 @media only screen and (max-width : 510px)
   .logo
@@ -560,6 +728,13 @@
 
   .contract .btn-group
     width: 100%
+
+  .portfolio-box
+    width: 100%
+    height: 280px
+
+  .advantages h2
+    font-size: 24px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 420px)

@@ -1,8 +1,9 @@
 <?php
 
-$recepient = "info@agent-rosta.ru"; //заменить на свой почтовый ящик
+$recepient = "info@agentrosta.ru"; //заменить на свой почтовый ящик
 $sitename = "АГЕНТ РОСТА";
 
+$name = trim($_POST["name"]);
 $phone = trim($_POST["phone"]);
 $email = trim($_POST["mail"]);
 $message = trim($_POST["message"]);
