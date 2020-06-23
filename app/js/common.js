@@ -22,7 +22,7 @@ var scene6 = document.getElementById('scene6');
 var parallaxInstance = new Parallax(scene6);
 
 
-$("form").submit(function () {
+$(".form").submit(function () {
     $.ajax({
         type: "POST",
         url: "mail.php",

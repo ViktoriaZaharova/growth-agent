@@ -39,6 +39,12 @@
   .advantages-wrapper
     margin: 0 0 30px
 
+  .portfolio-box
+    height: 400px
+
+  .portfolio-box__content
+    padding: 30px
+
 @media only screen and (max-width : 1580px)
   .container
     padding: 0 20px
@@ -119,9 +125,17 @@
 
   .tools-photo
     max-width: 550px
+    margin: auto
 
   .advantages h2
     font-size: 29px
+
+  .portfolio-box
+    height: 350px
+
+  .portfolio-box__content
+    h3
+      font-size: 24px
 
 
 @media only screen and (max-width : 1350px)
@@ -160,7 +174,19 @@
   .advantages:after
     top: 35%
 
+  .portfolio-box
+    height: 270px
 
+  .portfolio-box__content
+    padding: 30px 20px
+    .text
+      font-size: 16px
+      margin: 20px 0 auto
+    h3
+      font-size: 18px
+
+  .fancybox-photo
+    font-size: 16px
 
   .checkbox .label
     font-size: 16px
@@ -217,9 +243,47 @@
   .employee-box__content
     min-width: auto
     width: 100%
+    order: -1
+
+  .employee-box__photo:before
+    content: ''
+    position: absolute
+    top: 50%
+    border-top: 17.5px solid transparent
+    border-left: 30px solid #fff
+    border-right: none
+    border-bottom: 17.5px solid transparent
+    right: auto
+    left: 0
 
   .employee-box
     width: 100%
+    &:nth-child(3), &:nth-child(7)
+      .employee-box__photo:before
+        content: ''
+        position: absolute
+        top: 50%
+        border-top: 17.5px solid transparent
+        border-left: 30px solid #fff
+        border-right: none
+        border-bottom: 17.5px solid transparent
+        right: auto
+        left: 0
+    &:nth-child(even), &:nth-child(4)
+      .employee-box__content
+        order: 1
+      .employee-box__photo
+        &:before
+          right: 0
+          left: auto
+          width: 0
+          height: 0
+          border-left: none
+          border-top: 17.5px solid transparent
+          border-right: 30px solid #fff
+          border-bottom: 17.5px solid transparent
+          transform: rotate(0,-50%)
+
 
   .tools .sentence-image1
     max-width: 565px
@@ -349,18 +413,18 @@
 
   .portfolio-box
     width: 50%
-    height: 380px
+    height: auto
 
   .portfolio-box__content
     padding: 30px 20px
     font-size: 14px
     h3
-      font-size: 18px
+      font-size: 16px
     .text
       font-size: 14px
 
   .fancybox-photo
-    font-size: 18px
+    font-size: 14px
 
   .portfolio
     padding: 70px 0
@@ -397,6 +461,10 @@
 
   .img-parallax
     max-width: 200px
+
+  .contract
+    .img-parallax
+      max-width: 100%
 
   .question-section:before, .question-section:after
     display: none
@@ -646,7 +714,7 @@
         right: 17.5px solid transparent
         bottom: 30px solid #fff
 
-  .employee-box:nth-child(2) .employee-box__photo:before, .employee-box:nth-child(3) .employee-box__photo:before, .employee-box:nth-child(4) .employee-box__photo:before, .employee-box:nth-child(7) .employee-box__photo:before, .employee-box:nth-child(8) .employee-box__photo:before
+  .employee-box:nth-child(even) .employee-box__photo:before, .employee-box:nth-child(2) .employee-box__photo:before, .employee-box:nth-child(3) .employee-box__photo:before, .employee-box:nth-child(4) .employee-box__photo:before, .employee-box:nth-child(7) .employee-box__photo:before, .employee-box:nth-child(8) .employee-box__photo:before
     left: 50%
     bottom: 0
     top: auto

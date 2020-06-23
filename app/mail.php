@@ -1,6 +1,6 @@
 <?php
 
-$recepient = "info@agentrosta.ru"; //заменить на свой почтовый ящик
+$recepient = "info@agent-rosta.ru"; //заменить на свой почтовый ящик
 $sitename = "АГЕНТ РОСТА";
 
 $name = trim($_POST["name"]);
