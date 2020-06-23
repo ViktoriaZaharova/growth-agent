@@ -153,6 +153,7 @@ h2
   box-shadow: 10.6px 5.6px 18px 0 rgba(239, 22, 73, 0.2)
   background: #ef1649
   color: #fff
+  border: 1px solid #ef1649
   &:hover
     background: #fff
     color: #ef1649
@@ -275,7 +276,7 @@ main
   font-weight: 500
   text-transform: uppercase
   position: absolute
-  left: -140px
+  left: -190px
   top: 580px
   display: flex
   align-items: center
@@ -293,8 +294,9 @@ main
   p
     font-style: italic
     color: #ef1649
-    font-size: 18px
-    margin: 55px 0 0
+    font-size: 22px
+    font-weight: 500
+    margin: 77px 0 35px
     max-width: 565px
 
 .btn-group
@@ -521,6 +523,7 @@ strong
   justify-content: space-between
   flex-wrap: wrap
   padding: 0 70px
+  font-size: 20px
   li
     cursor: pointer
     transition: .3s ease
@@ -529,12 +532,13 @@ strong
     align-items: center
     justify-content: center
     color: #2b2b2b
-    padding: 20px 35px
-    border-radius: 30px
+    padding: 10px 10px
     margin: 0 0 36px
+    border: none
+      bottom: 1px solid transparent
   .active
-    color: #fff
-    background: #ef1649
+    color: #ef1649
+    border-color: #ef1649
 
 .tools-title
   color: #2b2b2b
@@ -668,8 +672,8 @@ strong
     left: auto
     right: -200px
     transform: rotate(-90deg) translate(0,-50%)
-    position: fixed
-    z-index: 7
+    position: absolute
+    z-index: 3
     top: 50%
     .text
       transform: rotate(180deg)
@@ -689,7 +693,7 @@ strong
   display: flex
   align-items: stretch
   color: #535353
-  font-size: 14px
+  font-size: 16px
   font-weight: 300
   &__photo
     width: 341px
